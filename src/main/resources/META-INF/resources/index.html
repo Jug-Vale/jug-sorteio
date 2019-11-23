@@ -1,0 +1,48 @@
+<html>
+<head>
+<style type="text/css">
+button {
+	margin: 5px;
+	width: 200px;
+	height: 30px;
+	border-radius: 4px
+}
+</style>
+
+<script type="text/javascript" src="index.js">
+	
+</script>
+</head>
+<body>
+	<h1>Sorteio de Participantes</h1>
+	<div>
+		<button onclick="iniciaSorteio()" id="btnSorteio">SORTEAR!</button>
+		<button onclick="confirmaSorteado()" id="btnConfirmarSorteado">CONFIRMAR
+			SORTEADO</button>
+	</div>
+	<div
+		style="height: 500px; background-color: gray; text-align: center; color: white;">
+		<p id="saidaSorteio"
+			style="font-size: 150px; text-overflow: clip; margin-top: 1px; padding-top: 100px">SEU
+			NOME AQUI!</p>
+	</div>
+
+	<footer>
+		<p>
+			Para Sortear/Total: <span id="totalSorteados">0</span> / <span
+				id="totalParticipantes">0</span>
+		</p>
+		<p>
+			<button onclick="buscarParticipantes()">Buscar Participantes</button>
+			<button onclick="carregaNovos()">Atualiza Participantes</button>
+		</p>
+		<p>
+			<button onclick="limpaECarrega()" style="color: red">Carregar</button>
+		</p>
+
+	</footer>
+
+	<audio src="som_sorteio.mp3" id="somSorteio"></audio>
+	<audio src="fim_sorteio.mp3" id="fimSorteio"></audio>
+</body>
+</html>
